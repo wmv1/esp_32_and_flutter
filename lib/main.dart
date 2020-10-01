@@ -1,4 +1,5 @@
 import 'package:esp_32_monitor/routes/app_routes.dart';
+import 'package:esp_32_monitor/views/from_android.dart';
 import 'package:esp_32_monitor/views/gauge_temperature.dart';
 import 'package:esp_32_monitor/views/home.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,8 @@ class _MyAppState extends State<MyApp> {
         ),
         routes: {
           AppRoutes.HOME: (_) => Home(),
-          AppRoutes.TEMPERATURE: (_) => GaugeTemperature()
+          AppRoutes.TEMPERATURE: (_) => GaugeTemperature(),
+          AppRoutes.FROM_ANDROID: (_) => FromAndroid()
         });
   }
 }

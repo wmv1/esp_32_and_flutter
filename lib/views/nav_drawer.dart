@@ -34,6 +34,11 @@ class NavDrawer extends StatelessWidget {
             onTap: () => {Navigator.pushNamed(context, AppRoutes.TEMPERATURE)},
           ),
           ListTile(
+            leading: Icon(Icons.input),
+            title: Text('FromAndroid'),
+            onTap: () => {Navigator.pushNamed(context, AppRoutes.FROM_ANDROID)},
+          ),
+          ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Sair'),
             onTap: () => {exit(0)},
