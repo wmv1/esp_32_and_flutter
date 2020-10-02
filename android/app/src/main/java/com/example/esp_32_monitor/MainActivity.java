@@ -1,4 +1,6 @@
 package com.example.esp_32_monitor;
+import android.os.SystemClock;
+
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity;
@@ -56,6 +58,9 @@ public class MainActivity extends FlutterActivity {
   }
 
   private String helloFromNativeCode() {
-    return "Hello from Native Android Code";
+    // int sleep = 5000;
+    // SystemClock.sleep(sleep);
+
+    return "Resposta do Javãooo";
   }
 }

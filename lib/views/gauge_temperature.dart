@@ -12,6 +12,7 @@ class GaugeTemperature extends StatefulWidget {
 }
 
 class _GaugeTemperatureState extends State<GaugeTemperature> {
+  String host = 'http://192.168.1.39/';
   double _maxTemperature = 100;
   double _minTemperature = 100;
   String futureAlbum;
@@ -44,7 +45,7 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
   }
 
   void initTemperatures() async {
-    final response = await http.get('http://192.168.1.1/min-max-temperatures');
+    final response = await http.get(host + 'min-max-temperatures');
     Map<String, dynamic> json = jsonDecode(response.body);
     _maxTemperature = json["temperatures"]["max"].toDouble();
 
@@ -58,7 +59,7 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
     });
 
     http.post(
-      'http://192.168.1.1/update-temperatures',
+      host + 'update-temperatures',
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -67,22 +68,19 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
         'min-temperature': _minTemperature.toString(),
       }),
     );
-    print(a);
+    print(a); // Não faça isso
   }
 
   Future<http.Response> setTemperature() async {
-    final response = await http.get('http://192.168.1.1/temp');
+    final response = await http.get(host + 'temp');
 
     if (response.statusCode == 200) {
       try {
-      _value = double.parse(response.body);
-
+        _value = double.parse(response.body);
       } catch (e) {
         debugPrint("Erro ao realizar parse de value");
       }
     }
-
-
 
     return response;
   }
