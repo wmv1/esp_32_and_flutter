@@ -97,7 +97,7 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
-      appBar: AppBar(title: Text("Temperatura")),
+      appBar: AppBar(title: Text("Temperature")),
       body: new Container(
         padding: new EdgeInsets.all(32.0),
         child: new Center(
@@ -122,7 +122,7 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
                 circularStrokeCap: CircularStrokeCap.butt,
               ),
               new Text(
-                  'Temperatura de acionamento: ${(_maxTemperature).round()}'),
+                  'Activation temperature: ${(_maxTemperature).round()}'),
               Slider(
                 activeColor: Colors.green,
                 inactiveColor: Colors.black26,
@@ -137,7 +137,7 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
                   });
                 },
               ),
-              new Text('Temperatura de desarme: ${(_minTemperature).round()}'),
+              new Text('Deactivation temperature: ${(_minTemperature).round()}'),
               Slider(
                 activeColor: Colors.green,
                 inactiveColor: Colors.black26,
@@ -160,7 +160,7 @@ class _GaugeTemperatureState extends State<GaugeTemperature> {
                   print("Persinted");
                 },
                 child: const Text(
-                  'Salvar',
+                  'Save',
                   style: TextStyle(fontSize: 20),
                 ),
               ),

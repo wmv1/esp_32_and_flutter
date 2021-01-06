@@ -28,7 +28,7 @@ class Teste extends StatelessWidget {
         height: 48.0,
         child: RaisedButton(
           color: Colors.green,
-          child: Text('Ir para temperatura?'),
+          child: Text('Go to temperature monitor'),
           onPressed: () {
             showAlertDialog(context);
           },
@@ -52,9 +52,9 @@ class Teste extends StatelessWidget {
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      title: Text("AlertDialog"),
+      title: Text("Alert"),
       content: Text(
-          "Ver temperatura?"),
+          "Are you sure?"),
       actions: [
         cancelButton,
         continueButton,
