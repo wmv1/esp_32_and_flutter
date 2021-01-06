@@ -1,6 +1,5 @@
 // import 'package:esp_32_monitor/views/gauge_temperature.dart';
 import 'package:esp_32_monitor/routes/app_routes.dart';
-import 'package:esp_32_monitor/views/gauge_temperature.dart';
 import 'package:flutter/material.dart';
 
 import 'nav_drawer.dart';

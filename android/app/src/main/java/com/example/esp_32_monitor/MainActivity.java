@@ -58,9 +58,6 @@ public class MainActivity extends FlutterActivity {
   }
 
   private String helloFromNativeCode() {
-    // int sleep = 5000;
-    // SystemClock.sleep(sleep);
-
     return "Resposta do Javãooo";
   }
 }
